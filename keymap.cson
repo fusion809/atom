@@ -1,0 +1,16 @@
+".platform-linux atom-text-editor:not([mini])":
+  "shift-ctrl-K": "json-writer:insert-link"
+  "shift-ctrl-I": "json-writer:insert-image"
+  "ctrl-i":       "json-writer:toggle-italic-text"
+  "ctrl-b":       "json-writer:toggle-bold-text"
+  "ctrl-'":       "json-writer:toggle-code-text"
+  "ctrl-h":       "json-writer:toggle-strikethrough-text"
+  "ctrl-1":       "json-writer:toggle-h1"
+  "ctrl-2":       "json-writer:toggle-h2"
+  "ctrl-3":       "json-writer:toggle-h3"
+  "ctrl-4":       "json-writer:toggle-h4"
+  "ctrl-5":       "json-writer:toggle-h5"
+  "ctrl-r":       "find-and-replace:replace-all"
+  "ctrl-shift-c": "terminal-plus:copy"
+'.editor':
+  "ctrl-alt-s":   "editor:toggle-soft-wrap"
