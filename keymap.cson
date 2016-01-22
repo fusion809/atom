@@ -1,6 +1,6 @@
 ".platform-linux atom-text-editor:not([mini])":
-  "ctrl-shift-B": "fuzzy-finder:toggle-buffer-finder"
-  "ctrl-shift-C": "terminal-plus:copy"
+  "shift-ctrl-B": "fuzzy-finder:toggle-buffer-finder"
+  "shift-ctrl-C": "terminal-plus:copy"
   "shift-ctrl-K": "markdown-writer:insert-link"
   "shift-ctrl-I": "markdown-writer:insert-image"
   "ctrl-b":       "markdown-writer:toggle-bold-text"
