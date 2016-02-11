@@ -1,10 +1,10 @@
 packages: [
-  "atom-gmail-checker"
   "build"
   "git-plus"
   "language-gentoo"
   "language-lua"
   "language-matlab-octave"
+  "language-rpm-spec"
   "language-sage"
   "language-scilab"
   "markdown-writer"

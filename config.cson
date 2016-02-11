@@ -2,5 +2,7 @@
   core: {}
   editor:
     invisibles: {}
+  "exception-reporting":
+    userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
   welcome:
     showOnStartup: false
