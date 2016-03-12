@@ -3,6 +3,19 @@
   editor:
     invisibles: {}
   "exception-reporting":
+    customFileTypes:
+      ".yml$": "toggle-soft-wrap"
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
+  "rss-ticker":
+    feed: "https://aur.archlinux.org/rss/"
+    fileTypes:
+      'emacs': 'source.lisp'
+      'spacemacs': 'source.lisp'
   welcome:
     showOnStartup: false
+".basic.html.text":
+  editor:
+    softWrap: true
+".source.yaml":
+  editor:
+    softWrap: true
