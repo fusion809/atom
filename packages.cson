@@ -1,5 +1,8 @@
 packages: [
+  "atom-material-syntax"
+  "atom-material-ui"
   "build"
+  "file-icons"
   "git-plus"
   "language-gentoo"
   "language-lua"
