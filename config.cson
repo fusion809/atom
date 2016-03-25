@@ -1,0 +1,25 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+  editor:
+    customFileTypes:
+      ".yml$": "toggle-soft-wrap"
+    fileTypes:
+      emacs: "source.lisp"
+      spacemacs: "source.lisp"
+    invisibles: {}
+    userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
+  "markdown-writer":
+    textStyles:
+      codeblock:
+        after: "~~~"
+        before: "~~~ bash"
+        regexAfter: "\\n~~~"
+        regexBefore: "~~~(?:[\\w- ]+)?\\n"
+      italic:
+        after: "*"
+        before: "*"
+  "rss-ticker":
+    feed: "https://aur.archlinux.org/rss/"
+  welcome:
+    showOnStartup: false

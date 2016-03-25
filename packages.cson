@@ -1,0 +1,16 @@
+packages: [
+  "build"
+  "git-plus"
+  "language-gentoo"
+  "language-lua"
+  "language-matlab-octave"
+  "language-rpm-spec"
+  "language-sage"
+  "language-scilab"
+  "markdown-writer"
+  "package-sync"
+  "pigments"
+  "project-manager"
+  "script"
+  "terminal-plus"
+]
