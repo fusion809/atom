@@ -1,7 +1,9 @@
 "*":
   core:
     allowPendingPaneItems: false
-    autoHideMenuBar: true
+    disabledPackages: [
+      "language-gfm"
+    ]
     ignoredNames: [
       ".git"
       ".osc"
@@ -20,6 +22,8 @@
     showIndentGuide: true
     softWrap: true
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
+  "exception-reporting":
+    userId: "dd9e8706-e58c-0f4d-e03d-0c6bd5ab94e4"
   "markdown-writer":
     textStyles:
       codeblock:
