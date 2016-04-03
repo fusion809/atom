@@ -4,6 +4,7 @@ packages: [
   "build"
   "file-icons"
   "git-plus"
+  "language-asciidoc"
   "language-gentoo"
   "language-lua"
   "language-matlab-octave"
