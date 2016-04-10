@@ -1,8 +1,20 @@
 "*":
   core:
     allowPendingPaneItems: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "language-gfm"
+      "nuclide"
     ]
     ignoredNames: [
       ".git"
@@ -24,6 +36,8 @@
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
   "exception-reporting":
     userId: "dd9e8706-e58c-0f4d-e03d-0c6bd5ab94e4"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "markdown-writer":
     textStyles:
       codeblock:
@@ -34,6 +48,23 @@
       italic:
         after: "*"
         before: "*"
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-clang-atom": {}
+    "nuclide-console": {}
+    "nuclide-datatip": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-python": {}
+    "nuclide-react-native": {}
+    "nuclide-working-sets": {}
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
   "terminal-plus":
