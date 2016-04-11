@@ -67,6 +67,8 @@
     "nuclide-working-sets": {}
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
+  "steam-pirate-ui":
+    backgroundImage: "/home/fusion809/.local/share/wallpapers/ws_Arch_Linux_universe_1920x1200.jpg"
   "terminal-plus":
     core: {}
     style: {}
