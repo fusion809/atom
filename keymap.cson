@@ -1,5 +1,6 @@
 ".platform-linux atom-text-editor:not([mini])":
-  "shift-ctrl-B": "fuzzy-finder:toggle-buffer-finder"
+  "shift-ctrl-F": "fuzzy-finder:toggle-buffer-finder"
+  "shift-ctrl-J": "fuzzy-finder:toggle-git-status-finder"
   "shift-ctrl-K": "markdown-writer:toggle-keystroke-text"
   "shift-ctrl-I": "markdown-writer:insert-image"
   "shift-ctrl-R": "find-and-replace:replace-all"
@@ -15,5 +16,9 @@
   "ctrl-4":       "markdown-writer:toggle-h4"
   "ctrl-5":       "markdown-writer:toggle-h5"
 '.editor':
-  "shift-ctrl-c": "terminal-plus:copy"
+  "ctrl-alt-c":   "terminal-plus:copy"
   "ctrl-alt-s":   "editor:toggle-soft-wrap"
+'body':
+  'ctrl-c': 'core:copy'
+  'ctrl-v': 'core:paste'
+  'ctrl-x': 'core:cut'

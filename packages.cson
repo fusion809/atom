@@ -6,6 +6,7 @@ packages: [
   "file-icons"
   "git-plus"
   "language-asciidoc"
+  "language-ejs"
   "language-gentoo"
   "language-lisp"
   "language-lua"
@@ -18,5 +19,6 @@ packages: [
   "pigments"
   "project-manager"
   "script"
+  "stylus"
   "terminal-plus"
 ]

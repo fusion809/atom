@@ -1,4 +1,7 @@
 "*":
+  "asciidoc-preview": {}
+  "autocomplete-clang": {}
+  build: {}
   core:
     allowPendingPaneItems: false
     customFileTypes:
@@ -9,12 +12,18 @@
       "source.json": [
         ".arcconfig"
       ]
+      "source.lisp": [
+        ".emacs"
+        ".spacemacs"
+      ]
       "source.python": [
         "BUCK"
       ]
     disabledPackages: [
-      "language-gfm"
+      "language-markdown"
+      "platformio-ide"
       "nuclide"
+      "platformio-ide-terminal"
     ]
     ignoredNames: [
       ".git"
@@ -38,6 +47,9 @@
     userId: "dd9e8706-e58c-0f4d-e03d-0c6bd5ab94e4"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "git-plus": {}
+  linter: {}
+  "markdown-preview": {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -65,6 +77,11 @@
     "nuclide-python": {}
     "nuclide-react-native": {}
     "nuclide-working-sets": {}
+  pigments: {}
+  "platformio-ide": {}
+  "platformio-ide-terminal":
+    core: {}
+    style: {}
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
   "steam-pirate-ui":
@@ -74,5 +91,7 @@
     style: {}
     toggles:
       autoClose: true
+  "tool-bar":
+    position: "Left"
   welcome:
     showOnStartup: false
