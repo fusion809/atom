@@ -1,22 +1,30 @@
 "*":
+  "":
+    basic:
+      html:
+        text:
+          editor:
+            softWrap: true
+    source:
+      yaml:
+        editor:
+          softWrap: true
   core:
     disabledPackages: [
       "language-gfm"
     ]
-  welcome:
-    showOnStartup: false
-  ".basic.html.text":
-    editor:
-      softWrap: true
-  ".source.yaml":
-    editor:
-      softWrap: true
-  "toggle-soft-wrap":
-    linter:
-      showErrorPanel: false
+    projectHome: "/home/fusion809/GitHub/mine"
+  editor:
+    showIndentGuide: true
+    softWrap: true
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
     fileTypes:
       emacs: "source.lisp"
       spacemacs: "source.lisp"
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
+  "toggle-soft-wrap":
+    linter:
+      showErrorPanel: false
+  welcome:
+    showOnStartup: false
