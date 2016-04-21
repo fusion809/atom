@@ -11,7 +11,7 @@
           softWrap: true
   core:
     disabledPackages: [
-      "language-gfm"
+      "language-markdown"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
   editor:
