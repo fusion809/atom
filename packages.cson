@@ -1,14 +1,7 @@
 packages: [
-  "asciidoc-preview"
-  "atom-material-syntax"
-  "atom-material-ui"
   "build"
-  "file-icons"
   "git-plus"
-  "language-asciidoc"
-  "language-ejs"
   "language-gentoo"
-  "language-lisp"
   "language-lua"
   "language-matlab-octave"
   "language-rpm-spec"
@@ -19,6 +12,5 @@ packages: [
   "pigments"
   "project-manager"
   "script"
-  "stylus"
   "terminal-plus"
 ]

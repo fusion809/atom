@@ -1,24 +1,17 @@
 ".platform-linux atom-text-editor:not([mini])":
-  "shift-ctrl-F": "fuzzy-finder:toggle-buffer-finder"
-  "shift-ctrl-J": "fuzzy-finder:toggle-git-status-finder"
-  "shift-ctrl-K": "markdown-writer:toggle-keystroke-text"
+  "shift-ctrl-B": "fuzzy-finder:toggle-buffer-finder"
+  "shift-ctrl-C": "terminal-plus:copy"
+  "shift-ctrl-K": "markdown-writer:insert-link"
   "shift-ctrl-I": "markdown-writer:insert-image"
-  "shift-ctrl-R": "find-and-replace:replace-all"
   "ctrl-b":       "markdown-writer:toggle-bold-text"
   "ctrl-'":       "markdown-writer:toggle-code-text"
   "ctrl-h":       "markdown-writer:toggle-strikethrough-text"
-  "ctrl-l":       "markdown-writer:insert-link"
   "ctrl-i":       "markdown-writer:toggle-italic-text"
-  "ctrl-p":       "markdown-writer:toggle-codeblock-text"
+  "ctrl-r":       "find-and-replace:replace-all"
   "ctrl-1":       "markdown-writer:toggle-h1"
   "ctrl-2":       "markdown-writer:toggle-h2"
   "ctrl-3":       "markdown-writer:toggle-h3"
   "ctrl-4":       "markdown-writer:toggle-h4"
   "ctrl-5":       "markdown-writer:toggle-h5"
 '.editor':
-  "ctrl-alt-c":   "terminal-plus:copy"
   "ctrl-alt-s":   "editor:toggle-soft-wrap"
-'body':
-  'ctrl-c': 'core:copy'
-  'ctrl-v': 'core:paste'
-  'ctrl-x': 'core:cut'

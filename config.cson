@@ -1,97 +1,22 @@
 "*":
-  "asciidoc-preview": {}
-  "autocomplete-clang": {}
-  build: {}
   core:
-    allowPendingPaneItems: false
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".flowconfig"
-      ]
-      "source.json": [
-        ".arcconfig"
-      ]
-      "source.lisp": [
-        ".emacs"
-        ".spacemacs"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
     disabledPackages: [
-      "language-markdown"
-      "platformio-ide"
-      "nuclide"
-      "platformio-ide-terminal"
+      "language-gfm"
     ]
-    ignoredNames: [
-      ".git"
-      ".osc"
-      ".svn"
-      ".hg"
-    ]
-    themes: [
-      "atom-dark-ui"
-      "one-dark-syntax"
-    ]
-  editor:
+  welcome:
+    showOnStartup: false
+  ".basic.html.text":
+    editor:
+      softWrap: true
+  ".source.yaml":
+    editor:
+      softWrap: true
+  "toggle-soft-wrap":
+    linter:
+      showErrorPanel: false
+  "rss-ticker":
+    feed: "https://aur.archlinux.org/rss/"
     fileTypes:
       emacs: "source.lisp"
       spacemacs: "source.lisp"
-    invisibles: {}
-    showIndentGuide: true
-    softWrap: true
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
-  "exception-reporting":
-    userId: "dd9e8706-e58c-0f4d-e03d-0c6bd5ab94e4"
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
-  "git-plus": {}
-  linter: {}
-  "markdown-preview": {}
-  "markdown-writer":
-    textStyles:
-      codeblock:
-        after: "~~~"
-        before: "~~~ bash"
-        regexAfter: "\\n~~~"
-        regexBefore: "~~~(?:[\\w- ]+)?\\n"
-      italic:
-        after: "*"
-        before: "*"
-  nuclide:
-    installRecommendedPackages: true
-    "nuclide-arcanist": {}
-    "nuclide-buck-files": {}
-    "nuclide-clang-atom": {}
-    "nuclide-console": {}
-    "nuclide-datatip": {}
-    "nuclide-debugger-hhvm": {}
-    "nuclide-flow": {}
-    "nuclide-format-js": {}
-    "nuclide-hack": {}
-    "nuclide-health": {}
-    "nuclide-ios-simulator-logs": {}
-    "nuclide-ocaml": {}
-    "nuclide-python": {}
-    "nuclide-react-native": {}
-    "nuclide-working-sets": {}
-  pigments: {}
-  "platformio-ide": {}
-  "platformio-ide-terminal":
-    core: {}
-    style: {}
-  "rss-ticker":
-    feed: "https://aur.archlinux.org/rss/"
-  "steam-pirate-ui":
-    backgroundImage: "/home/fusion809/.local/share/wallpapers/ws_Arch_Linux_universe_1920x1200.jpg"
-  "terminal-plus":
-    core: {}
-    style: {}
-    toggles:
-      autoClose: true
-  "tool-bar":
-    position: "Left"
-  welcome:
-    showOnStartup: false
