@@ -1,4 +1,5 @@
 packages: [
+  "browser-plus"
   "build"
   "git-plus"
   "language-gentoo"
