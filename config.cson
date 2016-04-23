@@ -17,6 +17,16 @@
   editor:
     showIndentGuide: true
     softWrap: true
+  "markdown-writer":
+    textStyles:
+      codeblock:
+        after: "~~~"
+        before: "~~~ bash"
+        regexAfter: "\\n~~~"
+        regexBefore: "~~~(?:[\\w- ]+)?\\n"
+      italic:
+        after: "*"
+        before: "*"
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
     fileTypes:
