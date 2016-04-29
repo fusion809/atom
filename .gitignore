@@ -1,0 +1,9 @@
+.apm
+.node-gyp
+.npm
+blob-store
+compile-cache
+electron
+packages
+storage
+nohup.out
