@@ -13,6 +13,7 @@ packages: [
   "language-rpm-spec"
   "language-sage"
   "language-scilab"
+  "language-viml"
   "markdown-writer"
   "material-monokai"
   "package-sync"
