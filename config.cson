@@ -10,14 +10,6 @@
         editor:
           softWrap: true
   core:
-    disabledPackages: [
-      "language-markdown"
-    ]
-    projectHome: "/home/fusion809/GitHub/mine"
-    themes: [
-      "glacier-dark-ui"
-      "atom-material-syntax"
-    ]
     customFileTypes:
       "source.ini": [
         ".buckconfig"
@@ -33,9 +25,18 @@
       "source.python": [
         "BUCK"
       ]
+    disabledPackages: [
+      "language-markdown"
+    ]
+    projectHome: "/home/fusion809/GitHub/mine"
+    themes: [
+      "glacier-dark-ui"
+      "atom-material-syntax"
+    ]
   editor:
     showIndentGuide: true
     softWrap: true
+  gist: {}
   "markdown-writer":
     textStyles:
       codeblock:
