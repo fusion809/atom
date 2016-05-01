@@ -37,6 +37,10 @@
     showIndentGuide: true
     softWrap: true
   gist: {}
+  "julia-client":
+    enableMenu: true
+    enableToolBar: true
+    launchOnStartup: true
   "markdown-writer":
     textStyles:
       codeblock:
@@ -53,5 +57,9 @@
   "toggle-soft-wrap":
     linter:
       showErrorPanel: false
+  "tool-bar":
+    position: "Left"
+  "uber-juno":
+    disable: true
   welcome:
     showOnStartup: false

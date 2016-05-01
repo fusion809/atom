@@ -1,10 +1,12 @@
 packages: [
   "atom-material-syntax"
   "atom-material-ui"
+  "atomic-chrome"
   "browser-plus"
   "build"
   "file-icons"
   "git-plus"
+  "git-time-machine"
   "glacier-dark"
   "language-gentoo"
   "language-lisp"
@@ -22,4 +24,5 @@ packages: [
   "script"
   "stylus"
   "terminal-plus"
+  "uber-juno"
 ]
