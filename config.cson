@@ -40,7 +40,7 @@
   "julia-client":
     enableMenu: true
     enableToolBar: true
-    launchOnStartup: true
+    launchOnStartup: false
   "markdown-writer":
     textStyles:
       codeblock:
