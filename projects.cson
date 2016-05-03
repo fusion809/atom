@@ -1,26 +1,31 @@
+# Arch Scripts
 "arch-scripts":
   title: "arch-scripts"
   paths: [
     "/home/fusion809/Shell"
   ]
   icon: "fl-archlinux"
+# Atom Installer
 "atom-installer":
   title: "atom-installer"
   paths: [
     "/home/fusion809/GitHub/mine/atom-installer"
   ]
   icon: "devicons devicons-atom"
+# The Hornery main repo
 "fusion809.github.io":
   title: "fusion809.github.io"
   paths: [
     "/home/fusion809/GitHub/mine/fusion809.github.io"
   ]
   icon: "fa fa-linux"
+# The Hornery Hexo repo
 "hexo-site":
   title: "hexo-site"
   paths: [
     "/home/fusion809/GitHub/mine/hexo-site"
   ]
+# PKGBUILDs repo
 PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
