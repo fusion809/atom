@@ -1,62 +1,49 @@
-# Arch Scripts
 "arch-scripts":
   title: "arch-scripts"
   paths: [
     "/home/fusion809/Shell"
   ]
-  group: 'shell-scripts'
-  icon:  "icon-archlinux"
-
-# Atom Installer
+  group: "shell-scripts"
+  icon: "icon-archlinux"
 "atom-installer":
   title: "atom-installer"
   paths: [
     "/home/fusion809/GitHub/mine/atom-installer"
   ]
-  group: 'atom'
-  icon:  "devicons devicons-atom"
-
-# The Hornery main repo
+  group: "atom"
+  icon: "devicons devicons-atom"
 "fusion809.github.io":
   title: "fusion809.github.io"
   paths: [
     "/home/fusion809/GitHub/mine/fusion809.github.io"
   ]
-  group: 'github-pages'
-  icon:  "ion-social-tux"
-
-# The Hornery Hexo repo
+  group: "github-pages"
+  icon: "ion-social-tux"
 "hexo-site":
   title: "hexo-site"
   paths: [
     "/home/fusion809/GitHub/mine/hexo-site"
   ]
-  group: 'github-pages'
-  icon:  'icon-nodejs'
-
-# JScripts repo
-"JScripts":
+  group: "github-pages"
+  icon: "icon-nodejs"
+JScripts:
   title: "JScripts"
   paths: [
     "/home/fusion809/GitHub/mine/JScripts"
   ]
-  group: 'programming'
-  icon:  'icon-javascript'
-
-# PKGBUILDs repo
-"PKGBUILDs":
+  group: "programming"
+  icon: "icon-javascript"
+PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
     "/home/fusion809/GitHub/mine/PKGBUILDs"
   ]
-  group: 'package-development'
-  icon:  "icon-shell"
-
-# rpmbuild repo
-"rpmbuild":
+  group: "package-development"
+  icon: "icon-shell"
+rpmbuild:
   title: "rpmbuild"
   paths: [
     "/home/fusion809/GitHub/mine/rpmbuild"
   ]
-  group: 'package-development'
-  icon:  'icon-redhat'
+  icon: "icon-redhat"
+  group: "package-development"

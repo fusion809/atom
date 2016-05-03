@@ -3,8 +3,15 @@ if ! `which apm >/dev/null 2>&1`; then
   if ! `which git >/dev/null 2>&1`; then
     sudo pacman -S git --noconfirm --force
   fi
-  git clone https://github.com/fusion809/PKGBUILDs $HOME/GitHub/mine/PKGBUILDs
-  cd $HOME/GitHub/mine/PKGBUILDs/atom-editor-sync
+  export PKG=$HOME/GitHub/mine/PKGBUILDs
+  if ! [[ -d $PKG ]]; then
+    git clone https://github.com/fusion809/PKGBUILDs $PKG
+  else
+    cd $PKG
+    git pull origin master
+    cd -
+  fi
+  cd $PKG/atom-editor-sync
   makepkg -si --noconfirm
   cd -
 fi
