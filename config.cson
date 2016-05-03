@@ -41,6 +41,7 @@
     enableMenu: true
     enableToolBar: true
     launchOnStartup: false
+  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -57,9 +58,5 @@
   "toggle-soft-wrap":
     linter:
       showErrorPanel: false
-  "tool-bar":
-    visible: false
-  "uber-juno":
-    disable: true
   welcome:
     showOnStartup: false
