@@ -10,6 +10,7 @@
   paths: [
     "/home/fusion809/GitHub/mine/fusion809.github.io"
   ]
+  icon: "fa fa-linux"
 "hexo-site":
   title: "hexo-site"
   paths: [
