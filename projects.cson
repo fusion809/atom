@@ -32,6 +32,15 @@
     "/home/fusion809/GitHub/mine/hexo-site"
   ]
   group: 'github-pages'
+  icon:  'icon-nodejs'
+
+# JScripts repo
+"JScripts":
+  title: "JScripts"
+  paths: [
+    "/home/fusion809/GitHub/mine/JScripts"
+  ]
+  group: 'programming'
   icon:  'icon-javascript'
 
 # PKGBUILDs repo
@@ -42,3 +51,12 @@
   ]
   group: 'package-development'
   icon:  "fa fa-terminal"
+
+# rpmbuild repo
+"rpmbuild":
+  title: "rpmbuild"
+  paths: [
+    "/home/fusion809/GitHub/mine/rpmbuild"
+  ]
+  group: 'package-development'
+  icon:  'icon-redhat'
