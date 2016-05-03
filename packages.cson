@@ -24,5 +24,4 @@ packages: [
   "script"
   "stylus"
   "terminal-plus"
-  "uber-juno"
 ]

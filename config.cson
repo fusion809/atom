@@ -58,7 +58,7 @@
     linter:
       showErrorPanel: false
   "tool-bar":
-    position: "Left"
+    visible: false
   "uber-juno":
     disable: true
   welcome:
