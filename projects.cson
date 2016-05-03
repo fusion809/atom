@@ -5,7 +5,7 @@
     "/home/fusion809/Shell"
   ]
   group: 'shell-scripts'
-  icon:  "fl-archlinux"
+  icon:  "icon-archlinux"
 
 # Atom Installer
 "atom-installer":
@@ -23,7 +23,7 @@
     "/home/fusion809/GitHub/mine/fusion809.github.io"
   ]
   group: 'github-pages'
-  icon:  "fa fa-linux"
+  icon:  "ion-social-tux"
 
 # The Hornery Hexo repo
 "hexo-site":
@@ -50,7 +50,7 @@
     "/home/fusion809/GitHub/mine/PKGBUILDs"
   ]
   group: 'package-development'
-  icon:  "fa fa-terminal"
+  icon:  "icon-shell"
 
 # rpmbuild repo
 "rpmbuild":

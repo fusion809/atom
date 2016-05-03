@@ -10,3 +10,6 @@
 [submodule "font-mfizz"]
 	path = font-mfizz
 	url = https://github.com/fizzed/font-mfizz
+[submodule "ionicons"]
+	path = ionicons
+	url = https://github.com/driftyco/ionicons/
