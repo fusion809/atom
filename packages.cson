@@ -8,6 +8,7 @@ packages: [
   "git-plus"
   "git-time-machine"
   "glacier-dark"
+  "icon-fonts"
   "language-gentoo"
   "language-lisp"
   "language-lua"
