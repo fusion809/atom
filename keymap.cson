@@ -3,6 +3,7 @@
   "shift-ctrl-C": "terminal-plus:copy"
   "shift-ctrl-K": "markdown-writer:insert-link"
   "shift-ctrl-I": "markdown-writer:insert-image"
+  "ctrl-alt-1":   "package-sync:sync"
   "ctrl-b":       "markdown-writer:toggle-bold-text"
   "ctrl-'":       "markdown-writer:toggle-code-text"
   "ctrl-h":       "markdown-writer:toggle-strikethrough-text"
