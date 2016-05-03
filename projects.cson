@@ -2,9 +2,14 @@
   title: "arch-scripts"
   paths: [
     "/home/fusion809/Shell"
-    "/home/fusion809/.bashrc"
-    "/home/fusion809/.zshrc"
   ]
+  icon: "fl-archlinux"
+"atom-installer":
+  title: "atom-installer"
+  paths: [
+    "/home/fusion809/GitHub/mine/atom-installer"
+  ]
+  icon: "devicons devicons-atom"
 "fusion809.github.io":
   title: "fusion809.github.io"
   paths: [
@@ -16,7 +21,7 @@
   paths: [
     "/home/fusion809/GitHub/mine/hexo-site"
   ]
-"PKGBUILDs":
+PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
     "/home/fusion809/GitHub/mine/PKGBUILDs"
