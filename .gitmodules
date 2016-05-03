@@ -7,3 +7,6 @@
 [submodule "devicons"]
 	path = devicons
 	url = https://github.com/vorillaz/devicons
+[submodule "font-mfizz"]
+	path = font-mfizz
+	url = https://github.com/fizzed/font-mfizz
