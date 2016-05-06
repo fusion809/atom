@@ -27,11 +27,12 @@
       ]
     disabledPackages: [
       "language-markdown"
+      "browser-plus"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
-      "glacier-dark-ui"
-      "atom-material-syntax"
+      "codecademy-atom-ui"
+      "material-monokai-syntax"
     ]
   editor:
     showIndentGuide: true

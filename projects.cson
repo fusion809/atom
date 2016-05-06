@@ -24,22 +24,22 @@
   paths: [
     "/home/fusion809/GitHub/mine/hexo-site"
   ]
-  group: "github-pages"
   icon: "icon-nodejs"
+  group: "github-pages"
 JScripts:
   title: "JScripts"
   paths: [
     "/home/fusion809/GitHub/mine/JScripts"
   ]
-  group: "programming"
   icon: "icon-javascript"
+  group: "programming"
 PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
     "/home/fusion809/GitHub/mine/PKGBUILDs"
   ]
-  group: "package-development"
   icon: "icon-shell"
+  group: "package-development"
 rpmbuild:
   title: "rpmbuild"
   paths: [

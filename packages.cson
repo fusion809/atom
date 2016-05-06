@@ -10,6 +10,7 @@ packages: [
   "glacier-dark"
   "icon-fonts"
   "language-gentoo"
+  "language-ini"
   "language-lisp"
   "language-lua"
   "language-matlab-octave"
