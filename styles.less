@@ -9,10 +9,19 @@
  * http://lesscss.org
  */
 
+@import "ui-variables";
+
+@background-color-highlight: #552;
+@background-color-selected: #5903F3;
+@tree-view-background-color: #535;
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
-//  background-color: #282c34;
+  // background-color: #282c34;
+}
+
+atom-text-editor::shadow .selected {
+  background-color: #592;
 }
 
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
@@ -27,4 +36,8 @@ atom-text-editor::shadow .cursor {
 
 atom-workspace.project-manager {
   font-size: 14px;
+}
+
+atom-workspace.tree-view {
+  background-color: #454;
 }

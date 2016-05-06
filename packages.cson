@@ -1,4 +1,5 @@
 packages: [
+  "accents"
   "atom-material-syntax"
   "atom-material-ui"
   "atomic-chrome"
@@ -7,7 +8,6 @@ packages: [
   "file-icons"
   "git-plus"
   "git-time-machine"
-  "glacier-dark"
   "icon-fonts"
   "language-gentoo"
   "language-ini"
@@ -24,6 +24,5 @@ packages: [
   "pigments"
   "project-manager"
   "script"
-  "stylus"
   "terminal-plus"
 ]

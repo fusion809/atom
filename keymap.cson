@@ -19,5 +19,5 @@
   "ctrl-alt-4":   "application:open-your-keymap"
   "ctrl-alt-5":   "application:open-your-snippets"
   "ctrl-alt-6":   "application:open-your-stylesheet"
-'.editor':
+'atom-text-editor':
   "ctrl-alt-s":   "editor:toggle-soft-wrap"

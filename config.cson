@@ -31,8 +31,8 @@
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
-      "codecademy-atom-ui"
-      "material-monokai-syntax"
+      "fusion-ui"
+      "dark-bint-syntax"
     ]
   editor:
     showIndentGuide: true
@@ -56,6 +56,12 @@
   "rss-ticker":
     feed: "https://aur.archlinux.org/rss/"
     userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "toggle-soft-wrap":
     linter:
       showErrorPanel: false
