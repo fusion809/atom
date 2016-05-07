@@ -9,6 +9,9 @@
       yaml:
         editor:
           softWrap: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "bf2cca29-8ffa-4111-8d84-0061d6b15165"
   core:
     customFileTypes:
       "source.ini": [
@@ -32,7 +35,7 @@
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"
-      "dark-bint-syntax"
+      "material-monokai-syntax"
     ]
   editor:
     showIndentGuide: true
