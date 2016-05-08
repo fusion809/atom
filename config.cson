@@ -28,6 +28,9 @@
       "source.python": [
         "BUCK"
       ]
+      "source.shell": [
+        "install"
+      ]
     disabledPackages: [
       "language-markdown"
       "browser-plus"
