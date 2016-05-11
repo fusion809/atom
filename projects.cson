@@ -30,6 +30,7 @@ JScripts:
   title: "JScripts"
   paths: [
     "/home/fusion809/GitHub/mine/JScripts"
+    "/home/fusion809/GitHub/mine/python-scripts"
   ]
   icon: "icon-javascript"
   group: "programming"
@@ -37,6 +38,7 @@ PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
     "/home/fusion809/GitHub/mine/PKGBUILDs"
+    "/home/fusion809/GitHub/mine/JScripts"
   ]
   icon: "icon-shell"
   group: "package-development"
