@@ -33,7 +33,12 @@
       ]
     disabledPackages: [
       "language-markdown"
-      "browser-plus"
+      "atom-beautify"
+      "atomic-chrome"
+      "build"
+      "Hydrogen"
+      "git-plus"
+      "language-asciidoc"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [

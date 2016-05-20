@@ -3,15 +3,19 @@
   paths: [
     "/home/fusion809/Shell"
   ]
-  group: "shell-scripts"
   icon: "icon-archlinux"
+  group: "shell-scripts"
 "atom-installer":
   title: "atom-installer"
   paths: [
     "/home/fusion809/GitHub/mine/atom-installer"
+    "/home/fusion809/GitHub/mine/brackets-installer"
+    "/home/fusion809/GitHub/mine/komodo-installer"
+    "/home/fusion809/GitHub/mine/lighttable-installer"
+    "/home/fusion809/GitHub/mine/vscode-installer"
   ]
-  group: "atom"
   icon: "devicons devicons-atom"
+  group: "atom"
 "fusion809.github.io":
   title: "fusion809.github.io"
   paths: [
@@ -38,7 +42,6 @@ PKGBUILDs:
   title: "PKGBUILDs"
   paths: [
     "/home/fusion809/GitHub/mine/PKGBUILDs"
-    "/home/fusion809/GitHub/mine/JScripts"
   ]
   icon: "icon-shell"
   group: "package-development"
