@@ -31,6 +31,16 @@
       "source.shell": [
         "install"
       ]
+      "text.html.basic": [
+        "ejs"
+        "htm"
+        "html"
+        "kit"
+        "shtml"
+        "tmpl"
+        "tpl"
+        "xhtml"
+      ]
     disabledPackages: [
       "language-markdown"
       "atom-beautify"
