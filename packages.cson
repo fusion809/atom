@@ -1,5 +1,4 @@
 packages: [
-  "atom-material-syntax"
   "dark-bint-syntax"
   "file-icons"
   "fusion-ui"
