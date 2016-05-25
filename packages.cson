@@ -13,5 +13,5 @@ packages: [
   "markdown-writer"
   "package-sync"
   "pigments"
-  "terminal-plus"
+  "platformio-ide-terminal"
 ]

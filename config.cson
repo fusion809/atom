@@ -9,9 +9,6 @@
       yaml:
         editor:
           softWrap: true
-  "atom-beautify":
-    general:
-      _analyticsUserId: "bf2cca29-8ffa-4111-8d84-0061d6b15165"
   core:
     customFileTypes:
       "source.ini": [
@@ -27,9 +24,6 @@
       ]
       "source.python": [
         "BUCK"
-      ]
-      "source.shell": [
-        "install"
       ]
       "text.html.basic": [
         "ejs"
@@ -53,17 +47,11 @@
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"
-      "material-monokai-syntax"
+      "dark-bint-syntax"
     ]
   editor:
     showIndentGuide: true
     softWrap: true
-  gist: {}
-  "julia-client":
-    enableMenu: true
-    enableToolBar: true
-    launchOnStartup: false
-  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -74,9 +62,6 @@
       italic:
         after: "*"
         before: "*"
-  "rss-ticker":
-    feed: "https://aur.archlinux.org/rss/"
-    userId: "20e33b17-b6ee-be85-6d79-5468d2ceffbc"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
