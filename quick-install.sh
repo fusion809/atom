@@ -20,10 +20,16 @@ cd $HOME/.atom
 if ! [[ -d .git ]]; then
   git init
 fi
+
+# Modify remote
 git remote rm origin
 git remote rm upstream
 git remote add origin git@github.com:fusion809/atom.git
 git remote add upstream git@github.com:fusion809/atom.git
+
+# Pull repo
 git pull origin master
+
+# Initialize submodules
 git submodule update --init --recursive
 cd -
