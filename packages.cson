@@ -1,16 +1,4 @@
 packages: [
-  "dark-bint-syntax"
-  "file-icons"
-  "fusion-ui"
-  "git-time-machine"
-  "language-ini"
-  "language-liquid"
-  "language-lisp"
-  "language-lua"
   "language-rpm-spec"
-  "language-viml"
-  "markdown-writer"
-  "package-sync"
-  "pigments"
-  "platformio-ide-terminal"
+  "md-writer"
 ]

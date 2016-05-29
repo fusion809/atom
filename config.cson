@@ -17,6 +17,7 @@
       ]
       "source.json": [
         ".arcconfig"
+        "BUCK.autodeps"
       ]
       "source.lisp": [
         ".emacs"
@@ -52,6 +53,10 @@
   editor:
     showIndentGuide: true
     softWrap: true
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  linter:
+    showErrorPanel: false
   "markdown-writer":
     textStyles:
       codeblock:
@@ -62,6 +67,9 @@
       italic:
         after: "*"
         before: "*"
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
