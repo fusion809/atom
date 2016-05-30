@@ -42,7 +42,6 @@
       "atomic-chrome"
       "build"
       "Hydrogen"
-      "git-plus"
       "language-asciidoc"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
@@ -55,8 +54,7 @@
     softWrap: true
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  linter:
-    showErrorPanel: false
+  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:

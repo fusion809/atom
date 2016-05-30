@@ -22,3 +22,5 @@
   "ctrl-alt-7":   "application:open-your-stylesheet"
 'atom-text-editor':
   "ctrl-alt-s":   "editor:toggle-soft-wrap"
+'body':
+  'alt-r': 'window:reload'
