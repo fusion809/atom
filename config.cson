@@ -37,12 +37,6 @@
         "xhtml"
       ]
     disabledPackages: [
-      "language-markdown"
-      "atom-beautify"
-      "atomic-chrome"
-      "build"
-      "Hydrogen"
-      "language-asciidoc"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
