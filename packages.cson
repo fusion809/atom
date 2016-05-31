@@ -12,4 +12,6 @@ packages: [
   "minimap"
   "pigments"
   "platformio-ide-terminal"
+  "fusion809/language-ini2"
+  "fusion809/language-patch2"
 ]

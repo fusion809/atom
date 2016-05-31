@@ -4,5 +4,3 @@ for i in "${L[$@]}"
 do
   apm install $i --no-confirm
 done
-
-apm install fusion809/language-patch2 fusion809/language-ini2
