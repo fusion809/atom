@@ -1,4 +1,15 @@
 packages: [
+  "dark-bint-syntax"
+  "file-icons"
+  "fusion-ui"
+  "git-plus"
+  "git-time-machine"
+  "language-asciidoc"
+  "language-docker"
+  "language-gentoo"
   "language-rpm-spec"
   "md-writer"
+  "minimap"
+  "pigments"
+  "platformio-ide-terminal"
 ]

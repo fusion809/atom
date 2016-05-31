@@ -36,8 +36,7 @@
         "tpl"
         "xhtml"
       ]
-    disabledPackages: [
-    ]
+    disabledPackages: []
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"

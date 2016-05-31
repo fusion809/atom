@@ -1,35 +1,10 @@
 #!/bin/bash
-if ! `which apm >/dev/null 2>&1`; then
-  if ! `which git >/dev/null 2>&1`; then
-    sudo pacman -S git --noconfirm --force
-  fi
-  export PKG=$HOME/GitHub/mine/PKGBUILDs
-  if ! [[ -d $PKG ]]; then
-    git clone https://github.com/fusion809/PKGBUILDs $PKG
-  else
-    cd $PKG
-    git pull origin master
-    cd -
-  fi
-  cd $PKG/atom-editor-sync
-  makepkg -si --noconfirm
-  cd -
-fi
+L=$(cat packages.cson | sed 's/"//g' | sed 's/  //g' | sed 's/packages: \[//g' | sed 's/\]//g' | sed "s/\n/ /g")
+for i in "${L[@]}"
+do
+  apm install $i --no-confirm
+done
 
-cd $HOME/.atom
-if ! [[ -d .git ]]; then
-  git init
-fi
-
-# Modify remote
-git remote rm origin
-git remote rm upstream
-git remote add origin git@github.com:fusion809/atom.git
-git remote add upstream git@github.com:fusion809/atom.git
-
-# Pull repo
-git pull origin master
-
-# Initialize submodules
-git submodule update --init --recursive
-cd -
+apm install https://github.com/fusion809/language-patch2 \
+  https://github.com/fusion809/language-ini2 \
+  https://github.com/fusion809/browser-plus-fix
