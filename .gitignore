@@ -1,0 +1,8 @@
+src
+pkg
+*.xz
+*.deb
+*.rpm
+*.gz
+*.log*
+.vscode

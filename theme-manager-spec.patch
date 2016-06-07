@@ -1,0 +1,175 @@
+--- a/spec/theme-manager-spec.coffee
++++ b/spec/theme-manager-spec.coffee
+@@ -40,7 +40,7 @@
+   describe "when the core.themes config value contains invalid entry", ->
+     it "ignores theme", ->
+       atom.config.set 'core.themes', [
+-        'fusion-ui'
++        'atom-light-ui'
+         null
+         undefined
+         ''
+@@ -48,19 +48,21 @@
+         4
+         {}
+         []
++        'atom-dark-ui'
+       ]
+
+-      expect(atom.themes.getEnabledThemeNames()).toEqual ['fusion-ui']
++      expect(atom.themes.getEnabledThemeNames()).toEqual ['atom-dark-ui', 'atom-light-ui']
+
+   describe "::getImportPaths()", ->
+     it "returns the theme directories before the themes are loaded", ->
+-      atom.config.set('core.themes', ['theme-with-index-less', 'fusion-ui'])
++      atom.config.set('core.themes', ['theme-with-index-less', 'atom-dark-ui', 'atom-light-ui'])
+
+       paths = atom.themes.getImportPaths()
+
+       # syntax theme is not a dir at this time, so only two.
+-      expect(paths.length).toBe 1
+-      expect(paths[0]).toContain 'fusion-ui'
++      expect(paths.length).toBe 2
++      expect(paths[0]).toContain 'atom-light-ui'
++      expect(paths[1]).toContain 'atom-dark-ui'
+
+     it "ignores themes that cannot be resolved to a directory", ->
+       atom.config.set('core.themes', ['definitely-not-a-theme'])
+@@ -84,7 +86,7 @@
+       runs ->
+         didChangeActiveThemesHandler.reset()
+         expect(document.querySelectorAll('style.theme')).toHaveLength 0
+-        atom.config.set('core.themes', ['fusion-ui'])
++        atom.config.set('core.themes', ['atom-dark-ui'])
+
+       waitsFor 'b', ->
+         didChangeActiveThemesHandler.callCount is 1
+@@ -92,16 +94,17 @@
+       runs ->
+         didChangeActiveThemesHandler.reset()
+         expect(document.querySelectorAll('style[priority="1"]')).toHaveLength 2
+-        expect(document.querySelector('style[priority="1"]').getAttribute('source-path')).toMatch /fusion-ui/
+-        atom.config.set('core.themes', ['fusion-ui'])
++        expect(document.querySelector('style[priority="1"]').getAttribute('source-path')).toMatch /atom-dark-ui/
++        atom.config.set('core.themes', ['atom-light-ui', 'atom-dark-ui'])
+
+       waitsFor 'c', ->
+         didChangeActiveThemesHandler.callCount is 1
+
+       runs ->
+         didChangeActiveThemesHandler.reset()
+-        expect(document.querySelectorAll('style[priority="1"]')).toHaveLength 1
+-        expect(document.querySelectorAll('style[priority="1"]')[0].getAttribute('source-path')).toMatch /fusion-ui/
++        expect(document.querySelectorAll('style[priority="1"]')).toHaveLength 2
++        expect(document.querySelectorAll('style[priority="1"]')[0].getAttribute('source-path')).toMatch /atom-dark-ui/
++        expect(document.querySelectorAll('style[priority="1"]')[1].getAttribute('source-path')).toMatch /atom-light-ui/
+         atom.config.set('core.themes', [])
+
+       waitsFor ->
+@@ -110,8 +113,8 @@
+       runs ->
+         didChangeActiveThemesHandler.reset()
+         expect(document.querySelectorAll('style[priority="1"]')).toHaveLength 2
+-        # fusion-ui has an directory path, the syntax one doesn't
+-        atom.config.set('core.themes', ['theme-with-index-less', 'fusion-ui'])
++        # atom-dark-ui has an directory path, the syntax one doesn't
++        atom.config.set('core.themes', ['theme-with-index-less', 'atom-dark-ui'])
+
+       waitsFor ->
+         didChangeActiveThemesHandler.callCount is 1
+@@ -120,10 +123,10 @@
+         expect(document.querySelectorAll('style[priority="1"]')).toHaveLength 2
+         importPaths = atom.themes.getImportPaths()
+         expect(importPaths.length).toBe 1
+-        expect(importPaths[0]).toContain 'fusion-ui'
++        expect(importPaths[0]).toContain 'atom-dark-ui'
+
+     it 'adds theme-* classes to the workspace for each active theme', ->
+-      atom.config.set('core.themes', ['fusion-ui', 'dark-bint-syntax'])
++      atom.config.set('core.themes', ['atom-dark-ui', 'atom-dark-syntax'])
+       workspaceElement = atom.views.getView(atom.workspace)
+       atom.themes.onDidChangeActiveThemes didChangeActiveThemesHandler = jasmine.createSpy()
+
+@@ -131,7 +134,7 @@
+         atom.themes.activateThemes()
+
+       runs ->
+-        expect(workspaceElement).toHaveClass 'theme-fusion-ui'
++        expect(workspaceElement).toHaveClass 'theme-atom-dark-ui'
+
+         atom.themes.onDidChangeActiveThemes didChangeActiveThemesHandler = jasmine.createSpy()
+         atom.config.set('core.themes', ['theme-with-ui-variables', 'theme-with-syntax-variables'])
+@@ -143,8 +146,8 @@
+         # `theme-` twice as it prefixes the name with `theme-`
+         expect(workspaceElement).toHaveClass 'theme-theme-with-ui-variables'
+         expect(workspaceElement).toHaveClass 'theme-theme-with-syntax-variables'
+-        expect(workspaceElement).not.toHaveClass 'theme-fusion-ui'
+-        expect(workspaceElement).not.toHaveClass 'theme-dark-bint-syntax'
++        expect(workspaceElement).not.toHaveClass 'theme-atom-dark-ui'
++        expect(workspaceElement).not.toHaveClass 'theme-atom-dark-syntax'
+
+   describe "when a theme fails to load", ->
+     it "logs a warning", ->
+@@ -378,13 +381,13 @@
+       activeThemeNames = atom.themes.getActiveThemeNames()
+       expect(console.warn.callCount).toBe 2
+       expect(activeThemeNames.length).toBe(2)
+-      expect(activeThemeNames).toContain('fusion-ui')
+-      expect(activeThemeNames).toContain('dark-bint-syntax')
++      expect(activeThemeNames).toContain('atom-dark-ui')
++      expect(activeThemeNames).toContain('atom-dark-syntax')
+
+   describe "when in safe mode", ->
+     describe 'when the enabled UI and syntax themes are bundled with Atom', ->
+       beforeEach ->
+-        atom.config.set('core.themes', ['fusion-ui', 'dark-bint-syntax'])
++        atom.config.set('core.themes', ['atom-light-ui', 'atom-dark-syntax'])
+
+         waitsForPromise ->
+           atom.themes.activateThemes()
+@@ -392,8 +395,8 @@
+       it 'uses the enabled themes', ->
+         activeThemeNames = atom.themes.getActiveThemeNames()
+         expect(activeThemeNames.length).toBe(2)
+-        expect(activeThemeNames).toContain('fusion-ui')
+-        expect(activeThemeNames).toContain('dark-bint-syntax')
++        expect(activeThemeNames).toContain('atom-light-ui')
++        expect(activeThemeNames).toContain('atom-dark-syntax')
+
+     describe 'when the enabled UI and syntax themes are not bundled with Atom', ->
+       beforeEach ->
+@@ -405,8 +408,8 @@
+       it 'uses the default dark UI and syntax themes', ->
+         activeThemeNames = atom.themes.getActiveThemeNames()
+         expect(activeThemeNames.length).toBe(2)
+-        expect(activeThemeNames).toContain('fusion-ui')
+-        expect(activeThemeNames).toContain('dark-bint-syntax')
++        expect(activeThemeNames).toContain('atom-dark-ui')
++        expect(activeThemeNames).toContain('atom-dark-syntax')
+
+     describe 'when the enabled UI theme is not bundled with Atom', ->
+       beforeEach ->
+@@ -418,12 +421,12 @@
+       it 'uses the default dark UI theme', ->
+         activeThemeNames = atom.themes.getActiveThemeNames()
+         expect(activeThemeNames.length).toBe(2)
+-        expect(activeThemeNames).toContain('fusion-ui')
+-        expect(activeThemeNames).toContain('dark-bint-syntax')
++        expect(activeThemeNames).toContain('atom-dark-ui')
++        expect(activeThemeNames).toContain('atom-light-syntax')
+
+     describe 'when the enabled syntax theme is not bundled with Atom', ->
+       beforeEach ->
+-        atom.config.set('core.themes', ['fusion-ui', 'installed-dark-syntax'])
++        atom.config.set('core.themes', ['atom-light-ui', 'installed-dark-syntax'])
+
+         waitsForPromise ->
+           atom.themes.activateThemes()
+@@ -431,5 +434,5 @@
+       it 'uses the default dark syntax theme', ->
+         activeThemeNames = atom.themes.getActiveThemeNames()
+         expect(activeThemeNames.length).toBe(2)
+-        expect(activeThemeNames).toContain('fusion-ui')
+-        expect(activeThemeNames).toContain('dark-bint-syntax')
++        expect(activeThemeNames).toContain('atom-light-ui')
++        expect(activeThemeNames).toContain('atom-dark-syntax')

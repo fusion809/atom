@@ -1,0 +1,31 @@
+--- a/src/theme-manager.coffee	2016-06-06 11:51:56.921451415 +1000
++++ b/src/theme-manager.coffee	2016-05-20 10:03:09.000000000 +1000
+@@ -89,17 +89,23 @@
+     # available.
+     if themeNames.length < 2
+       builtInThemeNames = [
+-        'fusion-ui'
+-        'dark-bint-syntax'
++        'atom-dark-syntax'
++        'atom-dark-ui'
++        'atom-light-syntax'
++        'atom-light-ui'
++        'base16-tomorrow-dark-theme'
++        'base16-tomorrow-light-theme'
++        'solarized-dark-syntax'
++        'solarized-light-syntax'
+       ]
+       themeNames = _.intersection(themeNames, builtInThemeNames)
+       if themeNames.length is 0
+-        themeNames = ['dark-bint-syntax', 'fusion-ui']
++        themeNames = ['atom-dark-syntax', 'atom-dark-ui']
+       else if themeNames.length is 1
+         if _.endsWith(themeNames[0], '-ui')
+-          themeNames.unshift('dark-bint-syntax')
++          themeNames.unshift('atom-dark-syntax')
+         else
+-          themeNames.push('fusion-ui')
++          themeNames.push('atom-dark-ui')
+
+     # Reverse so the first (top) theme is loaded after the others. We want
+     # the first/top theme to override later themes in the stack.
