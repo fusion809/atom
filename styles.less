@@ -1,0 +1,55 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+@import "ui-variables";
+
+@background-color-highlight: #552;
+@background-color-selected: #5903F3;
+@tree-view-background-color: #535;
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // background-color: #282c34;
+}
+
+atom-text-editor::shadow .selected {
+  background-color: #592;
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor::shadow .cursor {
+  border-color: red;
+}
+
+@import "/home/fusion809/.atom/devicons/css/devicons.css";
+@import "/home/fusion809/.atom/font-linux/assets/font-linux.css";
+@import "/home/fusion809/.atom/font-mfizz/dist/font-mfizz.css";
+@import "/home/fusion809/.atom/ionicons/css/ionicons.css";
+
+atom-workspace.project-manager {
+  font-size: 14px;
+}
+
+atom-workspace.tree-view {
+  background-color: #454;
+}
+
+.punctuation.output.liquid {
+  color: #f35922;
+}
+
+.punctuation.tag.liquid {
+  color: #94f125;
+}
+
+div.browser-plus webview {
+  height: 100%;
+}

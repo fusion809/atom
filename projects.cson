@@ -1,0 +1,54 @@
+"arch-scripts":
+  title: "arch-scripts"
+  paths: [
+    "/home/fusion809/Shell"
+  ]
+  icon: "icon-archlinux"
+  group: "shell-scripts"
+"atom-installer":
+  title: "atom-installer"
+  paths: [
+    "/home/fusion809/GitHub/mine/atom-installer"
+    "/home/fusion809/GitHub/mine/brackets-installer"
+    "/home/fusion809/GitHub/mine/komodo-installer"
+    "/home/fusion809/GitHub/mine/lighttable-installer"
+    "/home/fusion809/GitHub/mine/vscode-installer"
+  ]
+  icon: "devicons devicons-atom"
+  group: "atom"
+"fusion809.github.io":
+  title: "fusion809.github.io"
+  paths: [
+    "/home/fusion809/GitHub/mine/fusion809.github.io"
+  ]
+  group: "github-pages"
+  icon: "ion-social-tux"
+"hexo-site":
+  title: "hexo-site"
+  paths: [
+    "/home/fusion809/GitHub/mine/hexo-site"
+  ]
+  icon: "icon-nodejs"
+  group: "github-pages"
+JScripts:
+  title: "JScripts"
+  paths: [
+    "/home/fusion809/GitHub/mine/JScripts"
+    "/home/fusion809/GitHub/mine/python-scripts"
+  ]
+  icon: "icon-javascript"
+  group: "programming"
+PKGBUILDs:
+  title: "PKGBUILDs"
+  paths: [
+    "/home/fusion809/GitHub/mine/PKGBUILDs"
+  ]
+  icon: "icon-shell"
+  group: "package-development"
+rpmbuild:
+  title: "rpmbuild"
+  paths: [
+    "/home/fusion809/GitHub/mine/rpmbuild"
+  ]
+  icon: "icon-redhat"
+  group: "package-development"

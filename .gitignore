@@ -6,3 +6,14 @@ pkg
 *.gz
 *.log*
 .vscode
+.apm
+.node-gyp
+.npm
+blob-store
+compile-cache
+electron
+packages
+storage
+nohup.out
+gist.token
+

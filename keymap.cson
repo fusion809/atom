@@ -1,0 +1,26 @@
+".platform-linux atom-text-editor:not([mini])":
+  "shift-ctrl-B": "fuzzy-finder:toggle-buffer-finder"
+  "shift-ctrl-C": "terminal-plus:copy"
+  "shift-ctrl-K": "markdown-writer:insert-link"
+  "shift-ctrl-I": "markdown-writer:insert-image"
+  "ctrl-b":       "markdown-writer:toggle-bold-text"
+  "ctrl-'":       "markdown-writer:toggle-code-text"
+  "ctrl-h":       "markdown-writer:toggle-strikethrough-text"
+  "ctrl-i":       "markdown-writer:toggle-italic-text"
+  "ctrl-r":       "find-and-replace:replace-all"
+  "ctrl-1":       "markdown-writer:toggle-h1"
+  "ctrl-2":       "markdown-writer:toggle-h2"
+  "ctrl-3":       "markdown-writer:toggle-h3"
+  "ctrl-4":       "markdown-writer:toggle-h4"
+  "ctrl-5":       "markdown-writer:toggle-h5"
+  "ctrl-alt-1":   "package-sync:sync"
+  "ctrl-alt-2":   "package-sync:open-package-list"
+  "ctrl-alt-3":   "application:open-your-config"
+  "ctrl-alt-4":   "application:open-your-init-script"
+  "ctrl-alt-5":   "application:open-your-keymap"
+  "ctrl-alt-6":   "application:open-your-snippets"
+  "ctrl-alt-7":   "application:open-your-stylesheet"
+'atom-text-editor':
+  "ctrl-alt-s":   "editor:toggle-soft-wrap"
+'body':
+  'alt-r': 'window:reload'
