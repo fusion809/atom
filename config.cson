@@ -1,41 +1,5 @@
 "*":
-  "":
-    basic:
-      html:
-        text:
-          editor:
-            softWrap: true
-    source:
-      yaml:
-        editor:
-          softWrap: true
   core:
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".flowconfig"
-      ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
-      ]
-      "source.lisp": [
-        ".emacs"
-        ".spacemacs"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
-      "text.html.basic": [
-        "ejs"
-        "htm"
-        "html"
-        "kit"
-        "shtml"
-        "tmpl"
-        "tpl"
-        "xhtml"
-      ]
     disabledPackages: [
       "linter-markdown"
       "language-gfm"
@@ -49,8 +13,6 @@
     fontSize: 13
     showIndentGuide: true
     softWrap: true
-  "exception-reporting":
-    userId: "71ef2a62-823d-b379-0f88-bc92c164eedb"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "language-archlinux": {}
