@@ -1,178 +1,71 @@
-# Maintainer: Brenton Horne <brentonhorne77 at gmail dot com>
-
-_pkgname=atom
-_version=fusion
-
-# Module Versions
-_about_url="https://github.com/fusion809/about"
-_about_arch_ver=1.5.16
-_atom_typescript_ver=8.10.2
-_browser_plus_fix_ver=0.1.3
-_dark_bint_syntax_ver=0.8.4
-_electron_ver=0.36.12
-_file_icons_ver=1.7.13
-_fusion_ui_ver=0.10.3
-_git_plus_ver=5.14.0
-_git_time_machine_ver=1.5.3
-_language_asciidoc2_ver=1.5.0
-_language_asciidoc2_url="https://github.com/fusion809/language-asciidoc2"
-_language_d_ver=3.2.3
-_language_docker_ver=1.1.6
-_language_fortran_ver=2.0.11
-_language_gentoo_ver=0.9.0
-_language_gfm2_ver=0.90.3
-_language_groovy_ver=0.6.0
-_language_haskell_ver=1.7.15
-_language_ini2_ver=1.17.2
-_language_ini2_url="https://github.com/fusion809/language-ini2"
-_language_julia_ver=0.6.0
-_language_liquid_ver=0.5.1
-_language_lisp_ver=0.2.0
-_language_lua_ver=0.9.4
-_language_matlab_ver=0.2.1
-_language_pascal_ver=0.18.1
-_language_patch2_url="https://github.com/fusion809/language-patch2"
-_language_patch2_ver=0.1.3
-_language_rpm_spec2_ver=0.9.2
-_language_rpm_spec2_url="https://github.com/fusion809/language-rpm-spec2"
-_language_viml_ver=1.0.0
-_language_shellscript_ver=0.22.3
-_markdown_scroll_sync_ver=2.1.2
-_markdown_toc_ver=0.4.1
-_minimap_ver=4.24.3
-_nuclide_ver=0.139.0
-_package_sync_ver=1.1.0
-_pigments_ver=0.29.0
-_script_ver=3.7.3
-_platformio_ide_terminal_ver=2.0.10
-
-pkgname=${_pkgname}-editor-${_version}
-pkgver=1.7.4
-pkgrel=9
-pkgdesc='Hackable text editor for the 21st Century, based on web technologies with several custom packages installed.'
-arch=('x86_64' 'i686')
-url="https://github.com/${_pkgname}/${_pkgname}"
-license=('MIT')
-depends=('alsa-lib' 'desktop-file-utils' 'gconf' 'gtk2' 'libgnome-keyring' 'libnotify' 'libxtst' 'nodejs' 'nss' 'python2')
-optdepends=('gvfs: file deletion support')
-makedepends=('git' 'npm')
-conflicts=('atom-editor-bin' 'atom-editor')
-install=${_pkgname}-${_version}.install
-source=("${_pkgname}-${pkgver}.tar.gz::$url/archive/v${pkgver}.tar.gz"
-"about-arch-${_about_arch_ver}.tar.gz::$_about_url/archive/v${_about_arch_ver}.tar.gz"
-"${_pkgname}.desktop"
-"${_pkgname}")
-sha256sums=('6ef3bb4c2fea85a7d1c7665fef8aac4e353c8f8da5e2878fea3aecf5437383d4'
-            '1f9d3d560ab6374b38644e9c55a7c8fa0f8f581758fb2ee0b18c3f8c53aee44f'
-            'fb6527d029c5edffa89a5085cc1d3eaaa892e18cc2aefa8ce855be7612da4788'
-            '0b3e189202c82c98bc3d3f9a9c88d2aab88537cdd2e0fc2f4d537f55a068acb5')
-
-prepare() {
-  cd "$srcdir/${_pkgname}-$pkgver"
-
-  ## package.json edits
-  sed -i -e "/exception-reporting/d" \
-         -e "/metrics/d" package.json
-
-  sed -i -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" package.json # switching about with about-arch
-
-  sed -i -e "s/\"electronVersion\": \".*\"/\"electronVersion\": \"${_electron_ver}\"/g" package.json              # change electron ver
-
-  sed -i -e "/\"atom-light-syntax\": \".*\"/a \
-              \"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\"," package.json # install dark-bint-syntax
-
-  sed -i -e "/\"atom-light-ui\": \".*\",/a \
-             \"fusion-ui\": \"${_fusion_ui_ver}\"," package.json # install fusion-ui theme
-
-  sed -i -e "/\"find-and-replace\": \".*\",/i \
-              \"file-icons\": \"${_file_icons_ver}\"," package.json # file-icons
-
-  sed -i -e "/\"git-diff\": \".*\",/a \
-              \"git-plus\": \"${_git_plus_ver}\",\n    \"git-time-machine\": \"${_git_time_machine_ver}\"," package.json # git packages
-
-  sed -i -e "/\"language-c\": \".*\",/i \
-              \"language-asciidoc2\": \"${_language_asciidoc2_ver}\"," package.json
-
-  sed -i -e "/\"language-css\": \".*\",/a \
-              \"language-d\": \"${_language_d_ver}\",\n    \"language-docker\": \"${_language_docker_ver}\",\n    \"language-fortran\": \"${_language_fortran_ver}\"," package.json
-
-  sed -i -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",/g" package.json # GFM2
-
-  sed -i -e "/\"language-gfm2\": \".*\",/i \
-              \"language-gentoo\": \"${_language_gentoo_ver}\"," package.json # gentoo
-
-  sed -i -e "/\"language-hyperlink\": \".*\",/a \
-              \"language-ini2\": \"${_language_ini2_ver}\",\n    \"language-julia\": \"${_language_julia_ver}\"," package.json # Julia
-
-  sed -i -e "/\"language-less\": \".*\",/a \
-              \"language-liquid\": \"${_language_liquid_ver}\",\n    \"language-lisp\": \"${_language_lisp_ver}\",\n    \"language-lua\": \"${_language_lua_ver}\"," package.json # Add Liquid, Lisp, Lua
-
-  sed -i -e "/\"language-makefile\": \".*\",/a \
-              \"language-matlab\": \"${_language_matlab_ver}\"," package.json # MATLAB
-
-  sed -i -e "/\"language-perl\": \".*\",/i \
-              \"language-pascal\": \"${_language_pascal_ver}\",\n    \"language-patch2\": \"${_language_patch2_ver}\"," package.json # pascal
-
-  sed -i -e "/\"dependencies\": {/a \
-              \"language-patch2\": \"${_language_patch2_url}\"," package.json
-
-  sed -i -e "/\"dependencies\": {/a \
-              \"language-asciidoc2\": \"${_language_asciidoc2_url}\",\n    \"language-ini2\": \"${_language_ini2_url}\",\n    \"language-patch2\": \"${_language_patch2_ver}\",\n    \"language-rpm-spec2\": \"${_language_rpm_spec2_url}\"," package.json
-
-  sed -i -e "/\"language-toml\": \".*\",/a \
-              \"language-viml\": \"${_language_viml_ver}\"," package.json   # Add VimL
-
-  sed -i -e "s/\"language-shellscript\": \".*\"/\"language-shellscript\": \"${_language_shellscript_ver}\"/g" package.json
-
-  sed -i -e "/\"language-shellscript\": \".*\",/i \
-              \"language-rpm-spec2\": \"${_language_rpm_spec2_ver}\"," package.json
-
-  sed -i -e "/\"package-generator\": \".*\",/a \
-              \"package-sync\": \"${_package_sync_ver}\",\n    \"pigments\": \"${_pigments_ver}\",\n    \"script\": \"${_script_ver}\",\n    \"platformio-ide-terminal\": \"${_platformio_ide_terminal_ver}\"," package.json
-
-  sed -i -e "/\"markdown-preview\": \".*\",/a \
-              \"markdown-scroll-sync\": \"${_markdown_scroll_sync_ver}\",\n    \"markdown-toc\": \"${_markdown_toc_ver}\",\n    \"minimap\": \"${_minimap_ver}\"," package.json
-
- sed -i -e "/\"bracket-matcher\": \".*\",/a \
-              \"browser-plus-fix\": \"${_browser_plus_fix_ver}\"," package.json
-
- sed -i -e "s|^\"|    \"|g"  package.json # fixing spacing issues
-
- chmod 755 -R package.json
-
- sed -i -e 's@node script/bootstrap@node script/bootstrap --no-quiet@g' \
- ./script/build || die "Fail fixing verbosity of script/build"
-
- if ! [[ -d node_modules ]]; then
-  mkdir -p node_modules
- else
-   rm -rf node_modules/about-arch
-   rm -rf node_modules/language-asciidoc2
-   rm -rf node_modules/language-rpm-spec
- fi
-
-  mv $srcdir/about-${_about_arch_ver} $srcdir/about-arch
-  mv $srcdir/about-arch node_modules
-  sed -i -e "s/atom-editor/atom-editor-${_version}/g" node_modules/about-arch/lib/about-view.coffee
-  sed -i -e "s/<%=Desc=%>/$pkgdesc/g" ${srcdir}/${_pkgname}.desktop
-}
-
-build() {
-  cd "$srcdir/${_pkgname}-$pkgver"
-  export PYTHON=/usr/bin/python2
-  until ./script/build --build-dir "$srcdir/${_pkgname}-build"; do :; done
-}
-
-package() {
-  cd "$srcdir/${_pkgname}-$pkgver"
-
-  script/grunt install --build-dir "$srcdir/${_pkgname}-build" --install-dir "$pkgdir/usr"
-
-  install -Dm755 "$srcdir/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}"
-
-  rm "$pkgdir/usr/share/applications/${_pkgname}.desktop"
-
-  install -Dm644 "$srcdir/${_pkgname}.desktop" "$pkgdir/usr/share/applications/${_pkgname}.desktop"
-  install -Dm644 "resources/app-icons/stable/png/1024.png" "$pkgdir/usr/share/pixmaps/${_pkgname}.png"
-  install -Dm644 "LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
-}
+name: "Injections: Shell"
+scopeName: "injections.shell"
+fileTypes: []
+injectionSelector: "source.shell" # Scope name(s) of the affected grammar
+patterns: [
+  {
+    'begin': '^\\b[_a-zA-Z0-9]*'
+    'beginCaptures':
+      '0':
+        'name': 'variable.definition.name'
+    'captures':
+      '1':
+        'name':  'variable.definition.other'
+    'end':   '='
+    'endCaptures':
+      '0':
+        'name': 'variable.definition.equal'
+  }
+  {
+    'match': '(?<![-/./\'/\"/=/])\\b(?:apm|apt|apt-get|apt-cache|apt-key|add-apt-repository|apt-add-repository|apt-config|apt-mark|aptitude|bundle|composer|dpkg|dpkg-architecture|dpkg-buildflags|dpkg-buildpackage|dpkg-checkbuilddeps|dpkg-deb|dpkg-distaddfile|dpkg-divert|dpkg-genchanges|dpkg-gencontrol|dpkg-gensymbols|dpkg-log-summary|dpkg-maintscript-helper|dpkg-mergechangelogs|dpkg-name|dpkg-parsechangelog|dpkg-query|dpkg-scanpackages|dpkg-scansources|dpkg-shlibdeps|dpkg-source|dpkg-split|dpkg-statoverride|dpkg-trigger|dpkg-vendor|dnf|ebuild|emerge|equery|equo|explodepkg|gem|installpkg|lein|makepkg|npm|osc|pacman|pkg|pkg_add|pip|pip3|pkgtool|removepkg|revdep-rebuild|rpm|rpm2archive|rpm2cpio|rpmargs|rpmbuild|rpmdb|rpmdev-bumpspec|rpmdev-checksig|rpmdev-cksum|rpmdev-diff|rpmdev-extract|rpmdev-md5|rpmdev-newinit|rpmdev-newspec|rpmdev-packager|rpmdev-rmdevelrpms|rpmdev-setuptree|rpmdev-sha1|rpmdev-sha224|rpmdev-sha256|rpmdev-sha384|rpmdev-sha512|rpmdev-sort|rpmdev-sum|rpmdev-vercmp|rpmdev-wipetree|rpmdiff|rpmdrake|rpmelfsym|rpmfile|rpm-find-leaves|rpmgraph|rpminfo|rpmkeys|rpmlint|rpmls|rpmpeek|rpmquery|rpmsodiff|rpmsoname|rpmspec|rpmverify|slapt-get|updpkgsums|upgradepkg|urpme|urpmf|urpmi|urpmi.update|urpmq|yum|zypper)\\b(?![-/\'/\"/=/])'
+    'name': 'support.function.packages.shell'
+  }
+  {
+    'match': '(?<![-/./\'/\"/=/])\\b(?:base32|base64|basename|cat|chcon|chgrp|chmod|chown|chroot|cksum|comm|cp|csplit|cut|date|dd|df|dir|dircolors|dirname|du|echo|env|expand|expr|factor|false|fmt|fold|head|hostid|id|install|join|link|ln|logname|ls|md5sum|mkdir|mkfifo|mknod|mktemp|mv|nice|nl|nohup|nproc|numfmt|od|paste|pathchk|pinky|pr|printenv|printf|ptx|pwd|readlink|realpath|rm|rmdir|runcon|seq|sha1sum|sha224sum|sha256sum|sha384sum|sha512sum|shred|shuf|sleep|sort|split|stat|stdbuf|stty|sum|sync|tac|tail|tee|test|timeout|touch|tr|true|truncate|tsort|tty|uname|unexpand|uniq|unlink|users|vdir|wc|who|whoami|yes)\\b(?![-/\'/\"/=/])'
+    'name': 'support.function.coreutils.shell'
+  }
+  {
+    'match': '(?<![-/./\'/\"/=/])\\b(?<![pacman/])(?:awk|curl|ed|grep|nano|patch|sed|su|sudo|vi|vim|wget)\\b(?![-/./\'/\"/=/])'
+    'name':  'support.function.extras.shell'
+  }
+  {
+    'match': '(?<![-/./\'/\"/=/@/])\\b(?:bzr|cvs|git|hg|svn)\\b(?![-/./=/\'/\"/+/@/])'
+    'name':  'support.function.vcs.shell'
+  }
+  {
+    'begin': 'sudo '
+    'beginCaptures':
+      '0':
+        'name': 'support.function.extras.shell'
+    'name': 'support.function.coreutils.shell'
+    'end': '(?:base32|base64|basename|cat|chcon|chgrp|chmod|chown|chroot|cksum|comm|cp|csplit|cut|date|dd|df|dir|dircolors|dirname|du|echo|env|expand|expr|factor|false|fmt|fold|head|hostid|id|install|join|link|ln|logname|ls|md5sum|mkdir|mkfifo|mknod|mktemp|mv|nice|nl|nohup|nproc|numfmt|od|paste|pathchk|pinky|pr|printenv|printf|ptx|pwd|readlink|realpath|rm|rmdir|runcon|seq|sha1sum|sha224sum|sha256sum|sha384sum|sha512sum|shred|shuf|sleep|sort|split|stat|stdbuf|stty|sum|sync|tac|tail|tee|test|timeout|touch|tr|true|truncate|tsort|tty|uname|unexpand|uniq|unlink|users|vdir|wc|who|whoami|yes)'
+    'endCaptures':
+      '0':
+        'name': 'support.function.coreutils.shell'
+  }
+  {
+    'begin': '(^\\s+)?(?<!\\S)(?=#)(?!#\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.shell'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#!'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.shebang.shell'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.shebang.shell'
+      }
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.shell'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.shell'
+      }
+    ]
+  }
+]

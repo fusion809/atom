@@ -36,17 +36,24 @@
         "tpl"
         "xhtml"
       ]
-    disabledPackages: []
+    disabledPackages: [
+      "linter-markdown"
+      "language-gfm"
+    ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"
-      "dark-bint-syntax"
+      "dark-fusion-syntax"
     ]
   editor:
+    fontSize: 13
     showIndentGuide: true
     softWrap: true
+  "exception-reporting":
+    userId: "71ef2a62-823d-b379-0f88-bc92c164eedb"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "language-archlinux": {}
   linter: {}
   "markdown-writer":
     textStyles:
@@ -70,5 +77,6 @@
   "toggle-soft-wrap":
     linter:
       showErrorPanel: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
