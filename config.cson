@@ -1,8 +1,9 @@
 "*":
   core:
     disabledPackages: [
-      "linter-markdown"
+      "about"
       "language-gfm"
+      "language-shellscript"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
@@ -15,8 +16,6 @@
     softWrap: true
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "language-archlinux": {}
-  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -27,18 +26,11 @@
       italic:
         after: "*"
         before: "*"
-  nuclide:
-    "nuclide-home":
-      showHome: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "toggle-soft-wrap":
-    linter:
-      showErrorPanel: false
-  "tree-view": {}
   welcome:
     showOnStartup: false
