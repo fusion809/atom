@@ -1,60 +1,21 @@
 "*":
-  "":
-    basic:
-      html:
-        text:
-          editor:
-            softWrap: true
-    source:
-      yaml:
-        editor:
-          softWrap: true
   core:
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".flowconfig"
-      ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
-      ]
-      "source.lisp": [
-        ".emacs"
-        ".spacemacs"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
-      "text.html.basic": [
-        "ejs"
-        "htm"
-        "html"
-        "kit"
-        "shtml"
-        "tmpl"
-        "tpl"
-        "xhtml"
-      ]
     disabledPackages: [
-      "linter-markdown"
+      "about"
       "language-gfm"
+      "language-shellscript"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"
-      "dark-fusion-syntax"
+      "dark-bint-syntax"
     ]
   editor:
-    fontSize: 13
+    fontSize: 12
     showIndentGuide: true
     softWrap: true
-  "exception-reporting":
-    userId: "71ef2a62-823d-b379-0f88-bc92c164eedb"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "language-archlinux": {}
-  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -65,18 +26,11 @@
       italic:
         after: "*"
         before: "*"
-  nuclide:
-    "nuclide-home":
-      showHome: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "toggle-soft-wrap":
-    linter:
-      showErrorPanel: false
-  "tree-view": {}
   welcome:
     showOnStartup: false
