@@ -1,0 +1,64 @@
+--- PKGBUILD	2016-06-07 16:01:00.825529231 +1000
++++ ../arch-atom/atom/PKGBUILD	2016-06-07 16:06:32.402063677 +1000
+@@ -1,16 +1,4 @@
+ # Maintainer: Nicola Squartini <tensor5@gmail.com>
+-# Module Versions
+-_about_arch_url="https://github.com/fusion809/about"
+-_about_arch_ver=1.5.17
+-_dark_bint_syntax_ver=0.8.6
+-_fusion_ui_ver=0.10.5
+-_language_archlinux_ver=0.2.1
+-_language_gfm2_ver=0.90.3
+-_language_ini_desktop_ver=1.18.0
+-_language_liquid_ver=0.5.1
+-_language_patch2_url="fusion809/language-patch2"
+-_language_patch2_ver=0.1.3
+-_language_unix_shell_ver=0.28.1
+ 
+ pkgname=atom
+ pkgver=1.8.0
+@@ -29,9 +17,6 @@
+         'fix-atom-sh.patch'
+         'fix-license-path.patch'
+         'run-as-node.patch'
+-        'prebuild-less-task.patch'
+-        'theme-manager.patch'
+-        'theme-manager-spec.patch'
+         'use-system-apm.patch'
+         'use-system-electron.patch')
+ sha256sums=('2950820b2c7ab658135e9cb7c003ff2074ec0a38ac3b324d85cc20bcb237e61f'
+@@ -40,9 +25,6 @@
+             'ac409d709fd1090fda93b6e575cf46f866d1f9f914a48ea94eb01af3d5c02b9e'
+             '061493b9e53722e194d688a7db9e26d7fbb9a1e2cb86284aae4d7dc61e425400'
+             'e0872fab5f7b6b108dfef3e8879c08be417955082571a10152d03ccce296d2f7'
+-            '8e3610c833637a35b35d27911105e945cfb0367b1b0679ee6551e790384c6356'
+-            '61f26cc4456d67fd5124a460b75c97007fa62271b6b3de36086ac6798eb4a51d'
+-            '757d0baccc2728ea25aefbfa5791166c43a7e7d902d9ba4af641d8f176726611'
+             '19ba93a502ff0c9db6e197f09eda9881999e4d80c264bc40d60f96e9423dd1a9'
+             '064c7b70db071cd639355677fe1132875c8f82b32439c2a369159376bf98dbaf')
+ 
+@@ -65,24 +47,6 @@
+   # Fix for Electron 1.2.0
+   patch -Np1 -i "${srcdir}"/beforeunload.patch
+   patch -Np1 -i "${srcdir}"/run-as-node.patch
+-
+-  sed -i -e "/exception-reporting/d" \
+-       -e "/metrics/d" \
+-       -e "/-ui/d" \
+-       -e "/-syntax/d" \
+-       -e "/-theme/d" \
+-       -e "s/\"tree-view\": \"0.205.0\",/\"tree-view\": \"0.208.0\",/g" \
+-       -e "s/\"language-gfm\": \".*\",/\"language-gfm2\": \"${_language_gfm2_ver}\",\n    \"language-ini-desktop\": \"${_language_ini_desktop_ver}\",\n    \"language-liquid\": \"${_language_liquid_ver}\",\n    \"language-patch2\": \"${_language_patch2_ver}\",/g" \
+-       -e "/\"dependencies\": {/a \
+-                   \"language-patch2\": \"${_language_patch2_url}\"," \
+-       -e "s/\"language-shellscript\": \".*\",/\"language-unix-shell\": \"${_language_unix_shell_ver}\",\n    \"language-archlinux\": \"${_language_archlinux_ver}\",/g" \
+-       -e "s/\"about\": \".*\"/\"about-arch\": \"${_about_arch_ver}\"/g" \
+-       -e "/\"packageDependencies\": {/a \
+-            \"dark-bint-syntax\": \"${_dark_bint_syntax_ver}\",\n    \"fusion-ui\": \"${_fusion_ui_ver}\"," package.json
+-
+-  patch -NRp1 -i "$srcdir/theme-manager-spec.patch"
+-  patch -NRp1 -i "$srcdir/theme-manager.patch"
+-  patch -NRp1 -i "$srcdir/prebuild-less-task.patch"
+ }
+ 
+ build() {

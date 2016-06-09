@@ -1,0 +1,25 @@
+--- a/build/tasks/prebuild-less-task.coffee	2016-06-06 11:51:56.920451405 +1000
++++ b/build/tasks/prebuild-less-task.coffee	2016-05-20 10:03:09.000000000 +1000
+@@ -36,11 +36,20 @@
+     compileBootstrap()
+
+     uiThemes = [
+-      'fusion-ui'
++      'atom-dark-ui'
++      'atom-light-ui'
++      'one-dark-ui'
++      'one-light-ui'
+     ]
+
+     syntaxThemes = [
+-      'dark-bint-syntax'
++      'atom-dark-syntax'
++      'atom-light-syntax'
++      'one-dark-syntax'
++      'one-light-syntax'
++      'solarized-dark-syntax'
++      'base16-tomorrow-dark-theme'
++      'base16-tomorrow-light-theme'
+     ]
+
+     prebuiltConfigurations = []

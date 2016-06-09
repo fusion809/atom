@@ -1,3 +1,11 @@
+src
+pkg
+*.xz
+*.deb
+*.rpm
+*.gz
+*.log*
+.vscode
 .apm
 .node-gyp
 .npm
@@ -8,3 +16,4 @@ packages
 storage
 nohup.out
 gist.token
+
