@@ -11,11 +11,13 @@
       "dark-bint-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 13
     showIndentGuide: true
     softWrap: true
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "fusion-ui":
+    debugMode: true
   "markdown-writer":
     textStyles:
       codeblock:
@@ -32,5 +34,9 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  "terminal-fusion":
+    core:
+      workingDirectory: "Active File"
+    style: {}
   welcome:
     showOnStartup: false
