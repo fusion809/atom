@@ -12,6 +12,7 @@ packages: [
   "language-gentoo"
   "language-gfm2"
   "language-ini-desktop"
+  "language-lua"
   "language-lisp"
   "fusion809/language-patch2"
   "language-rpm-spec"
