@@ -1,7 +1,6 @@
 "*":
   core:
     disabledPackages: [
-      "about"
       "language-gfm"
       "language-shellscript"
     ]
