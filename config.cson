@@ -44,6 +44,6 @@
       workingDirectory: "Active File"
     style: {}
   "tree-view":
-    hideVcsIgnoredFiles: true
+    autoReveal: true
   welcome:
     showOnStartup: false
