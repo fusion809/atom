@@ -16,4 +16,8 @@ packages
 storage
 nohup.out
 gist.token
-
+split-diff
+recovery
+node_modules
+git-time-machine
+dev

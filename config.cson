@@ -3,6 +3,7 @@
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
+      "project-manager"
     ]
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
@@ -10,13 +11,18 @@
       "dark-bint-syntax"
     ]
   editor:
-    fontSize: 13
+    fontSize: 12
     showIndentGuide: true
     softWrap: true
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "fusion-ui":
     debugMode: true
+    hexColor: "#ffffff"
+  "language-archlinux":
+    preferredPath: "/home/fusion809/AUR"
+  linter:
+    showErrorPanel: false
   "markdown-writer":
     textStyles:
       codeblock:
@@ -37,5 +43,7 @@
     core:
       workingDirectory: "Active File"
     style: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
