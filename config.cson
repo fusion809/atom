@@ -1,10 +1,14 @@
 "*":
+  "browser-plus":
+    homepage: "browser-plus://localhost:4000"
+    live: 1
   core:
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
       "project-manager"
     ]
+    excludeVcsIgnoredPaths: false
     projectHome: "/home/fusion809/GitHub/mine"
     themes: [
       "fusion-ui"
@@ -45,5 +49,6 @@
     style: {}
   "tree-view":
     autoReveal: true
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
