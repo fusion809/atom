@@ -3,6 +3,18 @@
     homepage: "browser-plus://localhost:4000"
     live: 1
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
@@ -25,8 +37,7 @@
     hexColor: "#ffffff"
   "language-archlinux":
     preferredPath: "/home/fusion809/AUR"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -47,6 +58,8 @@
     core:
       workingDirectory: "Active File"
     style: {}
+  "tool-bar":
+    position: "Left"
   "tree-view":
     autoReveal: true
     hideVcsIgnoredFiles: false
