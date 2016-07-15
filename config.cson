@@ -12,11 +12,14 @@
         ".arcconfig"
         "BUCK.autodeps"
       ]
+      "source.octave": [
+        ".m"
+      ]
       "source.python": [
         "BUCK"
       ]
-      "source.octave": [
-        ".m"
+      "source.shell.install": [
+        ".install"
       ]
     disabledPackages: [
       "language-gfm"
