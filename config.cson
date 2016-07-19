@@ -42,7 +42,9 @@
     debugMode: true
     hexColor: "#ffffff"
   "language-archlinux":
+    email: "brentonhorne77 at gmail dot com"
     preferredPath: "/home/fusion809/AUR"
+    username: "Brenton Horne"
   linter: {}
   "markdown-writer":
     textStyles:
