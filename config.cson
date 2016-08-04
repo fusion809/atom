@@ -29,6 +29,7 @@
       "language-gfm"
       "language-shellscript"
       "project-manager"
+      "link"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/home/fusion809/GitHub/mine"
