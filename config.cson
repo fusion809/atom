@@ -21,6 +21,10 @@
       "source.shell.install": [
         ".install"
       ]
+      "source.vala": [
+        ".vala"
+        ".vapi"
+      ]
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
@@ -45,7 +49,8 @@
     email: "brentonhorne77 at gmail dot com"
     preferredPath: "/home/fusion809/AUR"
     username: "Brenton Horne"
-  linter: {}
+  linter:
+    showErrorPanel: false
   "markdown-writer":
     textStyles:
       codeblock:
@@ -68,6 +73,7 @@
     style: {}
   "tool-bar":
     position: "Left"
+    visible: false
   "tree-view":
     autoReveal: true
     hideVcsIgnoredFiles: false
