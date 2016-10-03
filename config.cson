@@ -31,16 +31,19 @@
       "project-manager"
       "link"
     ]
-    excludeVcsIgnoredPaths: false
     projectHome: "/home/fusion809/GitHub/mine"
+    telemetryConsent: "no"
     themes: [
       "fusion-ui"
       "dark-bint-syntax"
     ]
   editor:
-    fontSize: 12
+    fontFamily: "Roboto Mono"
+    scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
+  "exception-reporting":
+    userId: "5b0c5a85-428d-ce03-94a1-fb5d0deb24d2"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "fusion-ui":
@@ -50,8 +53,7 @@
     email: "brentonhorne77 at gmail dot com"
     preferredPath: "/home/fusion809/AUR"
     username: "Brenton Horne"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
@@ -62,6 +64,10 @@
       italic:
         after: "*"
         before: "*"
+  "spell-check":
+    locales: [
+      "en-AU"
+    ]
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -74,9 +80,9 @@
     style: {}
   "tool-bar":
     position: "Left"
-    visible: false
   "tree-view":
     autoReveal: true
+    hideIgnoredNames: false
     hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
