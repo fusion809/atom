@@ -73,7 +73,6 @@
     style: {}
   "tool-bar":
     position: "Left"
-    visible: false
   "tree-view":
     autoReveal: true
     hideVcsIgnoredFiles: false
