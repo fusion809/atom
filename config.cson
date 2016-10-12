@@ -21,18 +21,17 @@
       "source.shell.install": [
         ".install"
       ]
-      "source.vala": [
-        ".vala"
-        ".vapi"
-      ]
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
+      "exception-reporting"
+      "metrics"
       "project-manager"
       "link"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/home/fusion809/GitHub/mine"
+    telemetryConsent: "no"
     themes: [
       "fusion-ui"
       "dark-bint-syntax"
