@@ -23,6 +23,7 @@ packages: [
   "language-fsharp"
   "language-gfm2"
   "language-gnuplot-atom"
+  "language-haskell"
   "language-ini-desktop"
   "language-latex"
   "language-liquid"
