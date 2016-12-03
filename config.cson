@@ -37,7 +37,7 @@
       "dark-bint-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 11
     scrollPastEnd: true
     showIndentGuide: true
     softWrap: true

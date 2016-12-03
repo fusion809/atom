@@ -28,6 +28,7 @@ packages: [
   "language-latex"
   "language-liquid"
   "language-lua"
+  "language-matlab-octave"
   "language-pascal"
   "fusion809/language-patch2"
   "language-rpm-spec"
