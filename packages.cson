@@ -1,7 +1,7 @@
 packages: [
   "ask-stack"
+  "atom-clang"
   "atom-oss-license"
-  "autocomplete-clang"
   "autocomplete-java"
   "autocomplete-modules"
   "autocomplete-python"
@@ -39,7 +39,6 @@ packages: [
   "latex-plus"
   "line-ending-selector"
   "linter"
-  "linter-clang"
   "linter-coffeescript"
   "linter-javac"
   "linter-js-tenx"
