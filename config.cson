@@ -12,7 +12,7 @@
         ".arcconfig"
         "BUCK.autodeps"
       ]
-      "source.matlab": [
+      "source.octave": [
         "m"
       ]
       "source.python": [
