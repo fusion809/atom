@@ -38,6 +38,7 @@ packages: [
   "language-scala"
   "language-unix-shell"
   "language-vala-modern"
+  "language-viml"
   "latex-plus"
   "line-ending-selector"
   "linter"

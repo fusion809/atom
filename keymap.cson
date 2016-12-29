@@ -21,6 +21,7 @@
   "ctrl-alt-6":   "application:open-your-snippets"
   "ctrl-alt-7":   "application:open-your-stylesheet"
   "alt-8":        "find-and-replace:toggle-buffer-finder"
+  "ctrl-shift-J": "julia-client:run-file"
 'atom-text-editor':
   "ctrl-alt-s":   "editor:toggle-soft-wrap"
 'body':

@@ -12,8 +12,8 @@
         ".arcconfig"
         "BUCK.autodeps"
       ]
-      "source.octave": [
-        ".m"
+      "source.matlab": [
+        "m"
       ]
       "source.python": [
         "BUCK"
@@ -46,6 +46,9 @@
   "fusion-ui":
     debugMode: true
     hexColor: "#ffffff"
+  "git-plus":
+    general:
+      _analyticsUserId: "16c413e4-73fe-42ce-96cd-df04b0404d8d"
   "julia-client":
     enableMenu: true
     enableToolBar: true
