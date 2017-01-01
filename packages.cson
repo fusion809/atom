@@ -53,4 +53,5 @@ packages: [
   "terminal-fusion"
   "tool-bar"
   "toolbar-fusion"
+  "valhalla"
 ]
