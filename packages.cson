@@ -44,7 +44,7 @@ packages: [
   "linter"
   "linter-coffeescript"
   "linter-javac"
-  "linter-js-tenx"
+  "linter-jshint"
   "linter-pylint"
   "markdown-writer"
   "minimap"

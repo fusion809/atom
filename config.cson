@@ -21,6 +21,9 @@
       "source.shell.install": [
         ".install"
       ]
+      "text.xml": [
+        "_service"
+      ]
     disabledPackages: [
       "language-gfm"
       "language-shellscript"
@@ -84,10 +87,15 @@
     style: {}
   "tool-bar":
     position: "Left"
+    visible: false
   "tree-view":
     autoReveal: true
     hideVcsIgnoredFiles: false
   "uber-juno":
     disable: true
+  valhalla:
+    firstTime: false
+    glibVersion: "2.50.2"
+    vapiDir: "/usr/share/vala/vapi/:usr/share/vala-0.32/vapi/"
   welcome:
     showOnStartup: false
