@@ -1,5 +1,6 @@
 packages: [
   "dark-bint-syntax"
+  "fusion-ui"
   "file-icons"
   "hyperclick"
   "hyperlink-hyperclick"
