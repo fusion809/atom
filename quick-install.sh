@@ -7,7 +7,7 @@ if ! [[ -d $HOME/.atom/.git ]]; then
     if [[ -d $HOME/.atom ]]; then
          mv $HOME/.atom $HOME/.atom.backup
     fi
-    git clone https://github.com/fusion809/atom $HOME/.atom
+    git clone --recursive https://github.com/fusion809/atom $HOME/.atom
 fi
 
 if ! [[ $PWD == "$HOME/.atom" ]]; then
