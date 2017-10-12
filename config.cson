@@ -1,4 +1,7 @@
 "*":
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": false
   "browser-plus":
     homepage: "browser-plus://localhost:4000"
     live: 1
@@ -60,8 +63,7 @@
     email: "brentonhorne77 at gmail dot com"
     preferredPath: "/home/fusion809/AUR"
     username: "Brenton Horne"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "markdown-writer":
     textStyles:
       codeblock:
