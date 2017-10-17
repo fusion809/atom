@@ -1,7 +1,4 @@
 "*":
-  "atom-ide-ui":
-    use:
-      "atom-ide-diagnostics-ui": false
   "browser-plus":
     homepage: "browser-plus://localhost:4000"
     live: 1
@@ -34,13 +31,14 @@
       "metrics"
       "project-manager"
       "link"
+      "linter"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/home/fusion809/GitHub/mine"
     telemetryConsent: "no"
     themes: [
       "fusion-ui"
-      "dark-bint-syntax"
+      "atom-monokai"
     ]
   editor:
     fontSize: 12
